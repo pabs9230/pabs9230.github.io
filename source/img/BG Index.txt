@@ -1,0 +1,4 @@
+Difuminación de arriba para abajo  Dark BG encima de Light BG
+
+#450F0F Dark BG
+#9E0003 Light BG
