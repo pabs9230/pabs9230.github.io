@@ -11,6 +11,24 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 
+@media(max-width: 360px){
+	.top-spotlight, .bgimg-1{
+		min-height: 700px;
+	}
+}
+
+@media(max-width: 1024px){
+	.top-spotlight, .bgimg-1{
+		min-height: 620px;
+	}
+}
+
+@media(min-width: 1200px){
+	.top-spotlight, .bgimg-1{
+		min-height: 865px;
+	}
+}
+
 body, html {
 	height: 100%;
 	line-height: 1.8;
@@ -51,23 +69,20 @@ img.center {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, #myNavbar {
-	background-position: 0vh;
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, #myNavbar {	
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
 	margin-top: 50px;
 	background-image: url('source/img/Top Background.png');
-	background-size: cover;
-	min-height: 700px;
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
 	background-image: url("source/img/Bot Background.png");
-	background-size: cover;
 	min-height: 1920px;
 }
 
@@ -117,6 +132,21 @@ img.center {
 	margin-top: 10px;
 }
 
+.top-spotlight{
+	background-image: url('source/img/Top book spotlight.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position-y: bottom;
+}
+
+#sabias-que{
+	background-image: url('source/img/Sabías que.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	min-height: 400px;
+	background-position-y: center;
+}
+
 </style>
 <body>
 
@@ -126,28 +156,31 @@ img.center {
 		<a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
 			<i class="fa fa-bars"></i>
 		</a>
-		<a href="#home" class="background-size: cover; background-repeat: no-repeat;3-bar-item w3-button">AUTOR</a>
+		<a href="#home" class="background-size:  cover; background-repeat: no-repeat;3-bar-item w3-button">AUTOR</a>
 		<a href="#about" class="w3-bar-item w3-button w3-hide-small">ENTREVISTA</a>
 		<a href="#contact" class="w3-bar-item w3-button w3-hide-small">REGISTRO</a>
 	</div>
 
 	<!-- Navbar on small screens -->
 	<div id="navDemo" class="w3-bar-block w3-whine w3-hide w3-hide-large w3-hide-medium">
+		<a href="#home" class="background-size: cover; background-repeat: no-repeat;3-bar-item w3-button">AUTOR</a>
+		<a href="#about" class="w3-bar-item w3-button w3-hide-small">ENTREVISTA</a>
+		<a href="#contact" class="w3-bar-item w3-button w3-hide-small">REGISTRO</a>
+<!-- 		
 		<a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ACERCA DE</a>
-		<a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACTO</a>
+		<a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACTO</a> -->
 	</div>
 </div>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container" id="home">
-	<div class="w3-display-middle" style="white-space:nowrap;">
+<div class="bgimg-1" id="home">
+	<div class="top-spotlight">
 	</div>
 </div>
 <div class="separator"></div>
 <!-- Container (About Section) -->
 <div id="autor" class="w3-display-container background">
 	<div class="w3-row">
-		<div class="w3-col l4 m3 s12 w3-margin">
+		<div class="w3-col l4 m12 s12 w3-margin">
 			<img src="source/img/Author Spotlight Pic.png" alt="Peter Maier" style="max-height: 600px; margin-top: 24px;">
 		</div>
 		<div class="w3-col l6 m7 s12 w3-margin-left w3-text-white">
