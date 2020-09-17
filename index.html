@@ -12,20 +12,24 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 
 @media(max-width: 360px){
-	.top-spotlight, .bgimg-1{
+	.top-spotlight, .bot-spotlight, .bgimg-1, .bgimg-2{
 		min-height: 700px;
 	}
 }
 
 @media(max-width: 1024px){
-	.top-spotlight, .bgimg-1{
+	.top-spotlight, .bot-spotlight, .bgimg-1, .bgimg-2{
 		min-height: 620px;
 	}
 }
 
 @media(min-width: 1200px){
-	.top-spotlight, .bgimg-1{
+	.top-spotlight, .bgimg-1, .bgimg-2{
 		min-height: 865px;
+	}
+
+	.bot-spotlight{
+		min-height: 1088px;
 	}
 }
 
@@ -69,7 +73,7 @@ img.center {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, #myNavbar {	
+.bgimg-1, .bgimg-2{	
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -83,30 +87,6 @@ img.center {
 /* Second image (Portfolio) */
 .bgimg-2 {
 	background-image: url("source/img/Bot Background.png");
-	min-height: 1920px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-	background-image: url("/w3images/parallax3.jpg");
-	min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-4 {
-	background-image: url("source/img/Etirecnis Bottom.jpg");
-	min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-5 {
-	background-image: url("source/img/Etirecnis 3Mid.jpg");
-	min-height: 400px;
-}
-
-.bgimg-6 {
-	background-image: url("source/img/Etirecnis 2Mid.jpg");
-	min-height: 400px;
 }
 
 
@@ -116,7 +96,7 @@ img.center {
 
 .submit-button{
 	width: 150px;
-	height: 48px;	
+	height: 48px;
 	margin-top: 50px !important;
 }
 
@@ -132,19 +112,38 @@ img.center {
 	margin-top: 10px;
 }
 
-.top-spotlight{
-	background-image: url('source/img/Top book spotlight.png');
+.top-spotlight, .bot-spotlight{	
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-position-y: bottom;
 }
 
-#sabias-que{
-	background-image: url('source/img/Sabías que.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	min-height: 400px;
-	background-position-y: center;
+.top-spotlight{
+	background-image: url('source/img/Top book spotlight.png');
+	position: relative;
+}
+
+.purchase-button{
+	width: 195px;
+    height: 70px;
+    position:absolute;
+    bottom: 50px;
+    right: 240px;
+}
+
+
+.bot-spotlight{
+	background-image: url('source/img/Bot book spotlight.png');
+	position: relative;
+}
+
+.purchase-button-big{
+	z-index: 2;
+    width: 240px;
+    height: 80px;
+    position: absolute;
+    bottom: -30px;
+    right: 42%;
 }
 
 </style>
@@ -174,6 +173,7 @@ img.center {
 
 <div class="bgimg-1" id="home">
 	<div class="top-spotlight">
+		<input type="image" class="purchase-button" src="source/img/Button Purchase unnactive.png" alt="Comprar" onmouseover="this.src='source/img/Button Purchase wMouse nc.png';" onmouseout="this.src='source/img/Button Purchase unnactive.png';">	
 	</div>
 </div>
 <div class="separator"></div>
@@ -187,19 +187,24 @@ img.center {
 			<h2>Peter Maier L.</h2>
 			<p>Nacido en Santiago de Chile en 1961. <br> Actualmente reside en Querétaro, México. <br> Peter Maier, a pesar de su corta edad demostró un gran interés en temas relacionados con la espiritalidad y el desarrollo del ser humano.</p>
 			<br><br>
-			<p>Itentando encontrar una epxlicación que respondiera a sus interrogantes sobre el origen y el significado de la vida, logró concretar su búesqueda y liberarse de un <b>autosecuestro</b>.</p>
-			<p><img src="source/img/YT Icon.png" alt="" style="height: 20px;"><img src="source/img/FB Icon.png" alt="" style="height: 20px; margin-left: 5px;"><img src="source/img/Twittet Icon.png" alt="" style="height: 20px; margin-left: 5px;"><img src="source/img/Instagram Icon.png" alt="" style="height: 20px; margin-left: 5px;"> /petermaieroficial</p>
+			<p>Intentando encontrar una explicación que respondiera a sus interrogantes sobre el origen y el significado de la vida, logró concretar su búsqueda y liberarse de un <b>autosecuestro</b>.</p>
+			<p>
+				<a href="https://www.youtube.com/petermaieroficial" target="_blank"><img src="source/img/YT Icon.png" alt="" style="height: 50px;"></a>
+				<a href="https://www.facebook.com/petermaieroficial" target="_blank"><img src="source/img/FB Icon.png" alt="" style="height: 50px; margin-left: 5px;"></a>
+				<a href="https://www.twitter.com/petermaieroficial" target="_blank"><img src="source/img/Twittet Icon.png" alt="" style="height: 50px; margin-left: 5px;"></a>
+				<a href="https://www.instagram.com/petermaieroficial" target="_blank"><img src="source/img/Instagram Icon.png" alt="" style="height: 50px; margin-left: 5px;"></a>
+			</p>
 		</div>
 	</div>
 </div>
 <div id="entrevista" class="w3-display-container background">
 	<p style="text-align: center; font-size: 64px;">VIDEO BOX TY <br> Entrevista completa</p>
 </div>
-<div class="bgimg-2 w3-display-container" id="home">
-	<div class="w3-display-middle" style="white-space:nowrap;">
+<div class="bgimg-2">
+	<div class="bot-spotlight">
+		<input type="image" class="purchase-button-big" src="source/img/Button Purchase unnactive.png" alt="Comprar" onmouseover="this.src='source/img/Button Purchase wMouse nc.png';" onmouseout="this.src='source/img/Button Purchase unnactive.png';">	
 	</div>
 </div>
-<div class="separator"></div>
 <div id="bottom_spotlight" class="w3-display-container background">
 	<div class="w3-container w3-center w3-text-white">
 		<p>Deseo recibir más información: <br> (* campos obligatorios)</p>
